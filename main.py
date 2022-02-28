@@ -22,7 +22,7 @@ def translate(word):
     else:
         return "Word doesn't exist. Please check the spelling of the word."
 
-if __name__ == "__main__":
+def main():
     word = input("Enter the word:")
     result = translate(word)
     if isinstance(result, list):
@@ -30,5 +30,12 @@ if __name__ == "__main__":
             print(i+1, ".) ", result[i])
     else:
         print(result)
+
+if __name__ == "__main__":
+    flag = 'y'
+    while flag == 'y':
+        main()
+        flag = input("Do you want to continue? (Y = Yes, N = No)")
+        flag = flag.lower()
      
     input("")
